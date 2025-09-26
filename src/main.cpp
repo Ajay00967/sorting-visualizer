@@ -22,12 +22,19 @@ int main() {
 
     sf::RenderWindow window(sf::VideoMode(800, 600), "Sorting Visualizer");
 
-    // ArrayState arr = {50, 200, 150, 300, 100};
-    // ArrayState arr = generateRandomArray(100, 350, 500);
-    ArrayState arr(10);
-    // std::iota(arr.begin(), arr.end(), 1);             // fill 1..50
-    for (int i = 0; i < (int)arr.size(); i++) arr[i] = 2 * i + 5;
-    std::shuffle(arr.begin(), arr.end(), std::mt19937{std::random_device{}()});
+    
+    bool random = false;
+    ArrayState arr;
+
+    if (random) {
+        arr = generateRandomArray(100, 350, 500);
+    } else {
+        arr.resize(1024);
+
+        for (int i = 0; i < (int)arr.size(); i++) arr[i] = 2 * i + 5;
+
+        std::shuffle(arr.begin(), arr.end(), std::mt19937{std::random_device{}()});
+    }
 
 
     // SortSteps steps = bubbleSort(arr);
@@ -35,7 +42,7 @@ int main() {
     // SortSteps steps = quickSort(arr);
     SortSteps steps = mergeSort(arr);
 
-    showSortingSteps(window, steps, 20);
+    showSortingSteps(window, steps);
 
     while (window.isOpen()) {
         sf::Event event;

@@ -29,7 +29,7 @@ void showArrayState(sf::RenderWindow & window, const ArrayState & arr) {
     window.display();
 }
 
-void showSortingSteps(sf::RenderWindow & window, const SortSteps & steps, int delay) {
+void showSortingSteps(sf::RenderWindow & window, const SortSteps & steps) {
     
     for (const auto & state : steps) {
 
@@ -43,6 +43,7 @@ void showSortingSteps(sf::RenderWindow & window, const SortSteps & steps, int de
 
         showArrayState(window, state); // show each state
 
+        int delay = std::max(1, 1000 / (int)steps.front().size());
         // wait of `delay` ms
         std::this_thread::sleep_for(std::chrono::milliseconds(delay));
 

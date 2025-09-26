@@ -8,6 +8,6 @@
 
 void showArrayState(sf::RenderWindow & window, const ArrayState & arr);
 
-void showSortingSteps(sf::RenderWindow & window, const SortSteps & steps, int delay = 50);
+void showSortingSteps(sf::RenderWindow & window, const SortSteps & steps);
 
 #endif
