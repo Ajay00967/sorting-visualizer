@@ -21,17 +21,17 @@ std::vector<int> generateRandomArray(int size, int minVal = 10, int maxVal = 500
 int main() {
 
     sf::RenderWindow window(sf::VideoMode(800, 600), "Sorting Visualizer");
-
     
     bool random = false;
     ArrayState arr;
+    int s = 1024;
 
     if (random) {
         arr = generateRandomArray(100, 350, 500);
     } else {
-        arr.resize(1024);
+        arr.resize(s);
 
-        for (int i = 0; i < (int)arr.size(); i++) arr[i] = 2 * i + 5;
+        for (int i = 0; i < (int)arr.size(); i++) arr[i] = 2 * i + 1;
 
         std::shuffle(arr.begin(), arr.end(), std::mt19937{std::random_device{}()});
     }

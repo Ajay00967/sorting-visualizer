@@ -4,10 +4,10 @@
 
 void showArrayState(sf::RenderWindow & window, const ArrayState & arr) {
 
-    window.clear(sf::Color::Black); // clear the window first
+    window.clear(sf::Color::Black); // clear window 
 
     int n = arr.size();
-    float barWidth = (window.getSize().x) / (n * 1.00f); // calculate the width of each bar 
+    float barWidth = (window.getSize().x) / (n * 1.00f); // width of each bar 
 
     int windowHeight = window.getSize().y;
     int maxVal = *max_element(arr.begin(), arr.end());
@@ -21,7 +21,7 @@ void showArrayState(sf::RenderWindow & window, const ArrayState & arr) {
         // Make each Bar
         sf::RectangleShape Bar(sf::Vector2f(barWidth - 1, -height));
         Bar.setPosition(i * barWidth, window.getSize().y);
-        Bar.setFillColor(sf::Color::Green);
+        Bar.setFillColor(sf::Color::Yellow);
 
         window.draw(Bar);
     }
