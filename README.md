@@ -27,7 +27,7 @@ For this you need to change the `main.cpp`
 ---
 
 ## Directory Structure
-
+```
 sorting-visualizer/
 │
 ├── include/
@@ -44,8 +44,7 @@ sorting-visualizer/
 │
 ├── Makefile
 └── README.md
-
----
+```
 
 ## Build Instructions
 
