@@ -1,6 +1,6 @@
 # Sorting Visualizer
 
-A **C++/SFML project** to visualize popular sorting algorithms in action. The visualizer animates each step of the algorithm, allowing you to **see how the array elements move and get sorted**.  
+A **C++/SFML(Simple & Fast Multimedia Library) project** to visualize popular sorting algorithms in action. The visualizer animates each step of the algorithm, allowing you to **see how the array elements move and get sorted**.  
 
 ---
 
@@ -61,9 +61,11 @@ make
 ```bash
 ./run
 ```
+```text
 Future versions may include interactive options to select:
 
 Algorithm type
 
 Array type (random or shuffled)
+```
 
