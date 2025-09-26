@@ -58,7 +58,7 @@ cd sorting-visualizer
 ```bash
 make
 ```
-3 **Run the visualization**
+3. **Run the visualization**
 ```bash
 ./run
 ```
@@ -68,7 +68,3 @@ Algorithm type
 
 Array type (random or shuffled)
 
-
-## Screenshots
-
-![Merge Sort](screenshots/merge.png)
