@@ -17,7 +17,4 @@ $(TARGET): $(OBJ)
 clean:
 	rm -f $(OBJ) $(TARGET)
 
-debug: CXXFLAGS += -g -O0
-debug: all
-
-.PHONY: all clean debug
+.PHONY: all clean
